@@ -2,7 +2,7 @@
 
 """ starts a Flask web application """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 
 app = Flask(__name__)
 
@@ -50,6 +50,8 @@ def number_odd_or_even(n):
     if n.isdigit() == 1:
         n = int(n)
         return render_template("6-number_odd_or_even.html", n=n)
+    else:
+        abort(404)
 
 if __name__ == "__main__":
     app.run(port=5000, host="0.0.0.0")
