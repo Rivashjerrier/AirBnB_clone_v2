@@ -18,6 +18,7 @@ def hbnb():
     """ Prints HBNB """
     return "HBNB"
 
+
 @app.route("/c/<text>", strict_slashes=False)
 def c_route(text):
     """ Prints C followed by the value of the text variable """
